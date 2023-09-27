@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+    <link rel="stylesheet" href="detalhes.css">
+    <link rel="stylesheet" href="todo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body onload="reload();">
+  <div id="modal">
+    <form id="form-to-do">
+        <span onclick="esconde('modal')" id="x"><i class='bx bx-x'></i></span>
+        <h2>Minhas Tarefas</h2>
+        <label class="titulo">
+            <span>Titulo:</span>
+            <input type="text" placeholder="Titulo da Tarefa" id="nweTodo">
+        </label>
+        <label class="data">
+            <span>Data:</span>
+            <input type="date" id="data" placeholder="20/02/2006">
+        </label>
+        <label class="descri">
+            <span>Descrição:</span>
+            <textarea name="to-do-descri" id="to-do-descri"></textarea>
+        </label>
+        <button id="btnEditaTodo" onclick="EditarToDo('${l}')">Editar Tarefa</button>
+    </form>
+</div>
+      <menu class="detemenu">
+        <i class='bx bx-left-arrow-alt' onclick="voltar()"></i>
+         <h1>Detalhe da tarefa</h1>
+      </menu>
+      <section class="detalhes">
+        <h1>Detalhes da tarefa</h1>
+        <div class="tela-detalhes" id="tela-detalhes">
+         
+        </div>
+        <p id="tempoTodo">publicado á 1minuto</p>
+        <div class="btns">
+          <button id="bntEditar" onclick="mostrar('modal')">Editar</button>
+          <button id="bntDeletar" onclick="removeItem()">Deletar</button>
+        </div>
+      </section>
+</body>
+<script src="toDo.js"></script>
+ <script src="NovoTodo.js"></script>
+  <script src="filterTodo.js"></script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home To.Do</title>
+    <link rel="stylesheet" href="todo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body onload="showValues();">
+
+     <menu>
+        <div id="modal">
+            <form id="form-to-do">
+                <span onclick="esconde('modal')" id="x"><i class='bx bx-x'></i></span>
+                <h2>Minhas Tarefas</h2>
+                <label class="titulo">
+                    <span>Titulo:</span>
+                    <input type="text" placeholder="Titulo da Tarefa" id="input-new-task">
+                </label>
+                <label class="data">
+                    <span>Data:</span>
+                    <input type="date" id="data" placeholder="20/02/2006">
+                </label>
+                <label class="descri">
+                    <span>Descrição:</span>
+                    <textarea name="to-do-descri" id="to-do-descri"></textarea>
+                </label>
+                <button onclick="newTask(), codar()" id="btnTarefa">Criar Tarefa</button>
+            </form>
+        </div>
+       <div class="sobre">
+        <div class="title">
+            <h1>to.do</h1>
+            <p>Manage your tasks</p>
+        </div>
+        <div class="my">
+           <div class="figure">
+            <img src="cone7.jpg">
+           </div>
+           <h3>Lourenço Cardoso</h3>
+           <p>Manager</p>
+           <i class='bx bx-exit'></i>
+        </div>
+       </div>
+       <div class="process">
+        <div class="dados">
+             <span>
+                <h2 id="totalTarefas">0</h2>
+                <p>Minhas tarefas</p>
+             </span>
+             <span>
+                <h2 id="tatalTerminadas">12</h2>
+                <p>Tarefas terminadas</p>
+             </span>
+        </div>
+        <button onclick="mostrar('modal')"  class="btn">+ Criar Tarefa</button>
+       </div>
+       <header class="label">
+        <i class='bx bx-search'></i>
+       <input  id="pesquisar" class="pesquisa" type="text" placeholder="Pesquisar por tarefas">
+       </header>
+     </menu>
+     <section class="body-list">
+         <h1>Minhas Tarefas</h1>
+         <div class="list">
+            <ul id="to-do-list" class="cards" >
+            </ul>
+         </div>        
+     </section>
+</body>
+<script src="toDo.js"></script>
+<script src="NovoTodo.js"></script>
+</html>
+
